@@ -13,3 +13,5 @@ if __name__ == '__main__':
     testing.test_add_time()
     testing.test_wrong_duration()
     testing.test_wrong_starting_day_of_the_week()
+
+    print("Done.")
