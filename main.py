@@ -1,16 +1,15 @@
-# This is a sample Python script.
+import time_calculator
+import test_module
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print("Running unit tests...")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    exec("test_module")
+
+    testing = test_module.MyTestCase()
+
+    testing.test_convert_time_to_12h_format()
+    testing.test_convert_time_to_24h_format()
+    testing.test_add_time()
+    testing.test_wrong_duration()
+    testing.test_wrong_starting_day_of_the_week()
